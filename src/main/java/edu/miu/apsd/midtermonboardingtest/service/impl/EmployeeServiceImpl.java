@@ -16,7 +16,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeRepository employeeRepository;
 
     public List<Employee> getAllEmployees() {
-        return repository.findAllEmployeesSortedBySalaryAndLastName();
+//        return repository.findAllEmployeesSortedBySalaryAndLastName();
+        return repository.findAllByOrderBySalaryAscLastNameDesc();
     }
 
     public Employee addNewEmployee(Employee employee) {

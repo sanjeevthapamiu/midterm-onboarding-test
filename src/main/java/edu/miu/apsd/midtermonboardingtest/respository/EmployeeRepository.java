@@ -13,4 +13,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("select e from Employee e ORDER BY e.salary asc, e.lastName desc")
     List<Employee> findAllEmployeesSortedBySalaryAndLastName();
 
+    // Same as JPQL above
+    List<Employee> findAllByOrderBySalaryAscLastNameDesc();
+
 }
